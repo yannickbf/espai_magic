@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "ArmyBeans";
+    src: url("../fonts/army_beans/armybeans.ttf");
+  }
+
 .menu_movil a{
-    padding: 2%;
+    padding: 2% 5%;
+    font-family: "ArmyBeans", normal;
+    font-size: 300%;
 }
