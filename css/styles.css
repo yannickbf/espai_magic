@@ -3,13 +3,27 @@
     src: url("../fonts/army_beans/armybeans.ttf");
 }
 
-.menu_movil{
+.menu_movil, .menu_tablet_pc{
     text-align: center;
 }
 
-.menu_movil a{
-    color: #CC7D1D;
+.menu_movil a, .menu_tablet_pc a{
+    color: #BA721A;
     font-family: "ArmyBeans", normal;
     font-size: 300%;
+    font-weight: bold;
+}
+
+.menu_movil a:hover, .menu_tablet_pc a:hover{
+    color:#CC7D1D;
+    text-decoration:none;
+}
+
+.menu_movil a{
     display: inherit;
+}
+
+.menu_tablet_pc a{
+    font-size: 240%;
+    padding: 0 2.5%;
 }
