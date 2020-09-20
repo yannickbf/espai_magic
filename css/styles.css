@@ -8,7 +8,8 @@
 }
 
 .menu_movil a{
-    padding: 2% 5%;
+    padding: 0;
     font-family: "ArmyBeans", normal;
     font-size: 300%;
+    display: inherit;
 }
