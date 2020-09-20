@@ -3,15 +3,19 @@
     src: url("../fonts/army_beans/armybeans.ttf");
 }
 
+@font-face {
+    font-family: "JointByPizzaDude";
+    src: url("../fonts/JointByPizzaDude.ttf");
+}
+
 .menu_movil, .menu_tablet_pc{
     text-align: center;
 }
 
 .menu_movil a, .menu_tablet_pc a{
-    color: #291906;
-    font-family: "ArmyBeans", normal;
-    font-size: 300%;
-    font-weight: bold;
+    color: #024059;
+    font-family: "JointByPizzaDude", normal;
+    font-size: 250%;
 }
 
 .menu_movil a:hover, .menu_tablet_pc a:hover{
@@ -24,6 +28,6 @@
 }
 
 .menu_tablet_pc a{
-    font-size: 240%;
-    padding: 0 2.5%;
+    font-size: 200%;
+    padding: 0 2.7%;
 }
