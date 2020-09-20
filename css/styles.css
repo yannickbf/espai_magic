@@ -1,4 +1,3 @@
-nav div{
-    display: inline-block;
-    background-color: aqua;
+.menu_movil a{
+    padding: 2%;
 }
