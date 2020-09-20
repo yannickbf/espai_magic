@@ -1,7 +1,11 @@
 @font-face {
     font-family: "ArmyBeans";
     src: url("../fonts/army_beans/armybeans.ttf");
-  }
+}
+
+.menu_movil{
+    text-align: center;
+}
 
 .menu_movil a{
     padding: 2% 5%;
