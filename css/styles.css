@@ -8,6 +8,26 @@
     src: url("../fonts/JointByPizzaDude.ttf");
 }
 
+@font-face {
+    font-family: "Punk-head";
+    src: url("../fonts/punk-head/Punk_Head.ttf");
+}
+
+@font-face {
+    font-family: "Saintley";
+    src: url("../fonts/saintley/Saintley.otf");
+}
+
+@font-face {
+    font-family: "Sarastvale-signature";
+    src: url("../fonts/sarastvale-signature/Sarastvale.woff");
+}
+
+@font-face {
+    font-family: "Penyet";
+    src: url("../fonts/penyet/Penyet-PersonalUse.otf");
+}
+
 .menu_movil, .menu_tablet_pc{
     text-align: center;
 }
@@ -30,4 +50,22 @@
 .menu_tablet_pc a{
     font-size: 200%;
     padding: 0 2.7%;
+}
+
+section h1{
+    font-family: "Punk-head";
+    font-weight: bold;
+    font-size:310%;
+    color: #002635;
+}
+
+section p{
+    font-family: "Penyet";
+    font-size: 200%;
+    color: #013042;
+}
+
+.img_quienes_somos_pc{
+    float: left; 
+    margin-right: 2%;
 }
