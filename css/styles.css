@@ -69,3 +69,25 @@ section p{
     float: left; 
     margin-right: 2%;
 }
+
+.facebook{
+    display: inline-block;
+    color:#375C8C;
+}
+
+.facebook:hover{
+    color:#37538C;
+    text-decoration: none;
+}
+
+.metodos_contacto ol{
+    list-style:none;
+}
+
+.telefonos span{
+    font-size: 120%;
+}
+
+li{
+    padding-bottom: 3%;
+}
