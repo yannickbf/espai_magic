@@ -91,3 +91,8 @@ section p{
 li{
     padding-bottom: 3%;
 }
+
+.img_inicio_pc{
+    float: right; 
+    margin-right: 2%;
+}
