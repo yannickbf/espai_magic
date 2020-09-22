@@ -16,7 +16,7 @@
         let xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
         //Molt alerta! si la url es un fitxer local no ens funcionarà sense canviar els permisos del navegador. Per aquest motiu ho he pujat a un fitxer de gitHub.
-        xobj.open('GET', 'https://github.com/yannickbf/espai_magic/blob/master/entradas_blog.json', true);
+        xobj.open('GET', 'entradas_blog.json', true);
         xobj.onreadystatechange = function () {
             if (xobj.readyState == 4 && xobj.status == "200") {
                 callback(xobj.responseText);
@@ -33,8 +33,9 @@
         });
     }
 
-    const arrayObj = [{ a: 1, b: 2, c: 3 },{ a: 4, b: 5, c: 6 }];
-    
+    //const arrayObj = [{"id":1,"fecha":"2012/04/30 10:14:23","titulo":"entrada1","descripcion":"entrada1 descripcion"},{"id":2,"fecha":"2020/09/22 16:28:23","titulo":"entrada2","descripcion":"entrada2 descripcion"}];
+    const arrayObj = listaEntradasBlog;
+
     for(var i=0; i<arrayObj.length; i++){
         //alert(arrayObj[i]);
         for(const obj in arrayObj[i]){
