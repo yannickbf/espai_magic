@@ -33,14 +33,16 @@
         });
     }
 
-    //const arrayObj = [{"id":1,"fecha":"2012/04/30 10:14:23","titulo":"entrada1","descripcion":"entrada1 descripcion"},{"id":2,"fecha":"2020/09/22 16:28:23","titulo":"entrada2","descripcion":"entrada2 descripcion"}];
-    const arrayObj = listaEntradasBlog;
+    const arrayObj = [{"id":1,"fecha":"2012/04/30 10:14:23","titulo":"entrada1","descripcion":"entrada1 descripcion"},{"id":2,"fecha":"2020/09/22 16:28:23","titulo":"entrada2","descripcion":"entrada2 descripcion"}];
+    //const arrayObj = listaEntradasBlog;
 
     for(var i=0; i<arrayObj.length; i++){
-        //alert(arrayObj[i]);
-        for(const obj in arrayObj[i]){
-            alert(`${obj}: ${arrayObj[i][obj]}`);
-        }
+        alert(
+            "Id: "+arrayObj[i].id+
+            "\nFecha: "+arrayObj[i].fecha+
+            "\nTitulo: "+arrayObj[i].titulo+
+            "\nDescripcion: "+arrayObj[i].descripcion
+            );
     }
 
     //Funcion para generar objeto con titulo y cuerpo
