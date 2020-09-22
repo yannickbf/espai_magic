@@ -82,6 +82,7 @@ section p{
 
 .metodos_contacto ol{
     list-style:none;
+    padding-left: 10px;
 }
 
 .telefonos span{
