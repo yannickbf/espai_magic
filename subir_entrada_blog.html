@@ -12,25 +12,37 @@
     var listaEntradasBlog;
 
     //Funcion para cargar Json
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            listaEntradasBlog = JSON.parse(this.responseText);
-        }
-    };
-    xmlhttp.open("GET", "entradas_blogs.txt", true);
-    xmlhttp.send();
+    function loadJSON(callback) {
+        let xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        //Molt alerta! si la url es un fitxer local no ens funcionarà sense canviar els permisos del navegador. Per aquest motiu ho he pujat a un fitxer de gitHub.
+        xobj.open('GET', 'entradas_blog.json', true);
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+                callback(xobj.responseText);
+            }
+        };
+        xobj.send(null);
+    }
 
-    //const arrayObj = [{"id":1,"fecha":"2012/04/30 10:14:23","titulo":"entrada1","descripcion":"entrada1 descripcion"},{"id":2,"fecha":"2020/09/22 16:28:23","titulo":"entrada2","descripcion":"entrada2 descripcion"}];
-    const arrayObj = listaEntradasBlog;
+    //Funcion por defecto para cargar el Json.
+    function init() {
+        loadJSON(function (response) {
+            // Parse JSON string into object
+            listaEntradasBlog = JSON.parse(response);
+        });
+    }
 
-    for (var i = 0; i < arrayObj.length; i++) {
+    const arrayObj = [{"id":1,"fecha":"2012/04/30 10:14:23","titulo":"entrada1","descripcion":"entrada1 descripcion"},{"id":2,"fecha":"2020/09/22 16:28:23","titulo":"entrada2","descripcion":"entrada2 descripcion"}];
+    //const arrayObj = listaEntradasBlog;
+
+    for(var i=0; i<arrayObj.length; i++){
         alert(
-            "Id: " + arrayObj[i].id +
-            "\nFecha: " + arrayObj[i].fecha +
-            "\nTitulo: " + arrayObj[i].titulo +
-            "\nDescripcion: " + arrayObj[i].descripcion
-        );
+            "Id: "+arrayObj[i].id+
+            "\nFecha: "+arrayObj[i].fecha+
+            "\nTitulo: "+arrayObj[i].titulo+
+            "\nDescripcion: "+arrayObj[i].descripcion
+            );
     }
 
     //Funcion para generar objeto con titulo y cuerpo
