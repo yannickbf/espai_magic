@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir entrada de blog a Espai Màgic</title>
+</head>
+<script>
+
+    //Lista de las entradas del Blog del Json
+    var listaEntradasBlog;
+
+    //Funcion para cargar Json
+    function loadJSON(callback) {
+        let xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        //Molt alerta! si la url es un fitxer local no ens funcionarà sense canviar els permisos del navegador. Per aquest motiu ho he pujat a un fitxer de gitHub.
+        xobj.open('GET', 'https://github.com/yannickbf/espai_magic/blob/master/entradas_blog.json', true);
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+                callback(xobj.responseText);
+            }
+        };
+        xobj.send(null);
+    }
+
+    //Funcion por defecto para cargar el Json.
+    function init() {
+        loadJSON(function (response) {
+            // Parse JSON string into object
+            listaEntradasBlog = JSON.parse(response);
+        });
+    }
+
+    for (objEntrada of listaEntradasBlog) {
+        alert(objEntrada.titulo);
+    }
+
+    //Funcion para generar objeto con titulo y cuerpo
+    function generarObjEntradaBlog() {
+        var entradaBlog = new Object();
+        entradaBlog.titulo = document.getElementById("titulo").value;
+        entradaBlog.cuerpo = document.getElementById("cuerpo").value;
+        return entradaBlog;
+    }
+
+    function generarJsonEntradaBlog() {
+
+    }
+
+    //Aqui controlamos que se hayan introducido los datos, devuelve "" si se han introducido los 2 datos, de lo contrario devuelve un string con los fallos
+    function controlDeDatos() {
+        var strErrores = "";
+
+        //Si no han introducido el titulo sera error
+        if (document.getElementById("titulo").value == "") {
+            strErrores += "Titulo no introducido\n";
+        }
+
+        if (document.getElementById("cuerpo").value == "") {
+            strErrores += "Cuerpo no introducido\n";
+        }
+
+        return strErrores;
+    }
+
+    //Funcion para añadir entrada
+    function anadirEntrada() {
+        alert(llistatHotels);
+
+        var datosCompletados = controlDeDatos();
+        if (datosCompletados == "") {
+
+        }
+        else {
+            alert("Faltan datos por completar:\n" + datosCompletados);
+        }
+    }
+
+</script>
+
+<body>
+    <div>
+        <label>Titulo:</label>
+        <input type="text" id="titulo" />
+    </div>
+    <div>
+        <br>
+        <lavel>Cuerpo:</lavel><br>
+        <textarea id="cuerpo" rows="10" cols="50"></textarea><br>
+        <button id="anadir" onclick="anadirEntrada()">Añadir</button>
+    </div>
+</body>
+
+</html>
