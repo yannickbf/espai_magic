@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Probando a cargar json con jquery</title>
+</head>
+
+<body>
+    <script>
+        var usuarios = [];
+        $(document).ready(function () {
+            $.getJSON("/data/usuarios.json", function (json) {
+                var datos = json.usuarios;
+                for (i in datos) {
+                    usuarios.push([datos[i].nombre, datos[i].correo, datos[i].nacimiento]);
+                }
+            });
+        });
+        alert(usuarios);
+    </script>
+                
+                <div id="tablaUsuarios"></div>
+            
+          
+</body>
+
+</html>
