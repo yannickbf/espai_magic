@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xml:base="datas.com" xmlns="http://www.w3.org/2005/Atom" xmlns:d="http://schemas.microsoft.com/ado/2005/04/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <id>
+    </id>
+    <title type="text">
+        Interfaz_lista_de_clientes
+    </title>
+    <updated>
+        2018-10-02T21:50:22Z
+    </updated>
+    <link href="Interfaz_lista_de_clientes" rel="self" title="Interfaz_lista_de_clientes"/>
+    <entry m:etag="etasrtfsdahfhgd">
+        <id>
+        </id>
+        <category scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" term="Interfaz_lista_de_clientes">
+        </category>
+        <title>
+        </title>
+        <updated>
+            2018-10-02T21:50:22Z
+        </updated>
+        <author>
+            <name>
+            </name>
+        </author>
+        <content type="application/xml">
+            <m:properties>
+                <d:no>
+                    CL0989234
+                </d:no>
+                <d:name>
+                    CLIENTE VARIOS
+                </d:name>
+                <d:search_name>
+                    CLIENTE VARIOS
+                </d:search_name>
+                <d:address>
+                    AV PRIMAVERA 2160 SURCO
+                </d:address>
+                <d:city>
+                  LIMA
+                </d:city>
+                <d:territory_code>
+                  15046
+                </d:territory_code>
+                <d:country_region_code>
+                    PE
+                </d:country_region_code>
+                <d:blocked xml:space="preserve">
+                  BLOCKED
+                </d:blocked>
+                <d:vat_registration_no>
+                    00000000000
+                </d:vat_registration_no>
+                <d:county>
+                  PERU
+                </d:county>
+                <d:e_mail>
+                    EMAIL.ADMIN@GMAIL.COM
+                </d:e_mail>
+                <d:inactivo m:type="Edm.Boolean">
+                    FALSE
+                </d:inactivo>
+                <d:school_no>
+                  150487
+                </d:school_no>
+                <d:school_name>
+                  NOMBRE DEL COLEGIO
+                </d:school_name> 
+            </m:properties>
+        </content>
+    </entry>
+</feed>
