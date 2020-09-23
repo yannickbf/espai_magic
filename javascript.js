@@ -2,10 +2,10 @@
     
     var mydata = JSON.parse(data);
 
-    function readTextFile(file, callback) { var rawFile = new XMLHttpRequest(); rawFile.overrideMimeType("application/json"); rawFile.open("GET", file, true); rawFile.onreadystatechange = function() { if (rawFile.readyState === 4 && rawFile.status == "200") { callback(rawFile.responseText); } } rawFile.send(null); } //usage: readTextFile("/Users/Documents/workspace/test.json", function(text){ var data = JSON.parse(text); console.log(data); }); 
+    //function readTextFile(file, callback) { var rawFile = new XMLHttpRequest(); rawFile.overrideMimeType("application/json"); rawFile.open("GET", file, true); rawFile.onreadystatechange = function() { if (rawFile.readyState === 4 && rawFile.status == "200") { callback(rawFile.responseText); } } rawFile.send(null); } //usage: readTextFile("/Users/Documents/workspace/test.json", function(text){ var data = JSON.parse(text); console.log(data); }); 
 
     //const arrayObj = [{"id":1,"fecha":"2012/04/30 10:14:23","titulo":"entrada1","descripcion":"entrada1 descripcion"},{"id":2,"fecha":"2020/09/22 16:28:23","titulo":"entrada2","descripcion":"entrada2 descripcion"}];
-    const arrayObj = jsonData;
+    const arrayObj = mydata;
 
     for(var i=0; i<arrayObj.length; i++){
         alert(
