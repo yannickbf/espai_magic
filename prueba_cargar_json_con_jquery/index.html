@@ -12,7 +12,7 @@
     <script>
         var usuarios = [];
         $(document).ready(function () {
-            $.getJSON("/data/usuarios.json", function (json) {
+            $.getJSON("prueba_cargar_json_con_jquery/data/usuarios.json", function (json) {
                 var datos = json.usuarios;
                 for (i in datos) {
                     alert(datos[i].nombre);
