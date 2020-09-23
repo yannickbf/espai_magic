@@ -16,11 +16,13 @@
 //Leer nodos
 $.get("scripts/archivo.xml", function (xml) {
     $(xml).find("entrada_blog").each(function () {
-       var name = $(this).find('id').text();
-       var description = $(this).find('fecha').text();
-       var url = $(this).find('hora').text();
+       var id = $(this).find('id').text();
+       var fecha = $(this).find('fecha').text();
+       var hora = $(this).find('hora').text();
+       var titulo = $(this).find('titulo').text();
+       var descripcion = $(this).find('descripcion').text();
  
-       alert(name + " " + description + " " + url);
+       alert(id + " " + fecha + " " + hora + " " + titulo + " " + descripcion);
     });
 });
 
