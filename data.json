@@ -1,4 +1,3 @@
-data = '
 [
     {
         "id":1,
@@ -12,4 +11,4 @@ data = '
         "titulo":"entrada2",
         "descripcion":"entrada2 descripcion"
     }
-]';
+]
