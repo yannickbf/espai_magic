@@ -15,11 +15,12 @@
             $.getJSON("/data/usuarios.json", function (json) {
                 var datos = json.usuarios;
                 for (i in datos) {
+                    alert(datos[i].nombre);
                     usuarios.push([datos[i].nombre, datos[i].correo, datos[i].nacimiento]);
                 }
             });
         });
-        alert(usuarios);
+        //alert(usuarios);
     </script>
                 
                 <div id="tablaUsuarios"></div>
