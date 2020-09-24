@@ -13,28 +13,34 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
-//Leer nodos
-$.get("scripts/archivo.xml", function (xml) {
+  //Leer nodos
+  $.get("scripts/archivo.xml", function (xml) {
+    var xmlDoc = xml.responseXML;
+    var newNode = xmlDoc.createElement("entrada_blog");
+    var x = xmlDoc.documentElement;
+    var y = xmlDoc.getElementsByTagName("entrada_blog");
+    x.insertBefore(newNode, y[0]);
+
     $(xml).find("entrada_blog").each(function () {
-       var id = $(this).find('id').text();
-       var fecha = $(this).find('fecha').text();
-       var hora = $(this).find('hora').text();
-       var titulo = $(this).find('titulo').text();
-       var descripcion = $(this).find('descripcion').text();
- 
-       alert(id + " " + fecha + " " + hora + " " + titulo + " " + descripcion);
+      var id = $(this).find('id').text();
+      var fecha = $(this).find('fecha').text();
+      var hora = $(this).find('hora').text();
+      var titulo = $(this).find('titulo').text();
+      var descripcion = $(this).find('descripcion').text();
+
+      alert(id + " " + fecha + " " + hora + " " + titulo + " " + descripcion);
     });
-});
+  });
 
-//Escribir nodos
-xmlDoc=loadXMLDoc("scripts/archivo.xml");
-
-newNode=xmlDoc.createElement("entrada_blog");
-
-x=xmlDoc.documentElement;
-y=xmlDoc.getElementsByTagName("entrada_blog")[0];
-
-x.insertBefore(newNode,y); 
+  /*//Escribir nodos
+  xmlDoc=loadXMLDoc("scripts/archivo.xml");
+  
+  newNode=xmlDoc.createElement("entrada_blog");
+  
+  x=xmlDoc.documentElement;
+  y=xmlDoc.getElementsByTagName("entrada_blog")[0];
+  
+  x.insertBefore(newNode,y); */
 </script>
 
 </html>
